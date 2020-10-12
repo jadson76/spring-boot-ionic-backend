@@ -24,6 +24,16 @@ public class Estado implements Serializable{
 	
 	@OneToMany(mappedBy = "estado")
 	private List<Cidade> cidades = new ArrayList<Cidade>();
+	
+	public Estado() {
+		
+	}
+	
+	public Estado(Integer id, String nome) {
+		super();
+		this.id = id;
+		this.nome = nome;
+	}
 
 	public Integer getId() {
 		return id;
@@ -47,13 +57,7 @@ public class Estado implements Serializable{
 
 	public void setCidades(List<Cidade> cidades) {
 		this.cidades = cidades;
-	}
-
-	public Estado(Integer id, String nome) {
-		super();
-		this.id = id;
-		this.nome = nome;
-	}
+	}	
 
 	@Override
 	public int hashCode() {
