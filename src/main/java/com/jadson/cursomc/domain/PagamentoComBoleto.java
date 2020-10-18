@@ -3,8 +3,11 @@ package com.jadson.cursomc.domain;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Entity;
+
 import com.jadson.cursomc.domain.enums.EstadoPagamento;
 
+@Entity
 public class PagamentoComBoleto extends Pagamento implements Serializable{
 
 	
